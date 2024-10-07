@@ -1,0 +1,27 @@
+//- Section Configuration
+-
+  /**
+   * Section Variables
+   * @param {string} section_name - The name of this section (without the underscores).
+            Once converted to lowercase, it becomes (@param section_id).
+            It should be the same as the folder name for the sources of this section
+            namely 'images & listings' and it should also be the same as the name of this file.
+   * @param {string} exercise_folder - the name of the exercise folder where this section is physically located.
+            This will make it possible for the content of the section to be reused in other exercises.
+   */
+  var section_name = 'Intro';
+  var exercise_folder = '_template';
+
+include ../../../templates/exercises/section_id
+//- -----
+
+
+div.section(id=section_id)
+  h1 #{section_name}
+
+  //- ---------------
+  //- Section Content
+  //- ---------------
+
+  p Start adding your content from this point forward.
+

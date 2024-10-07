@@ -1,0 +1,32 @@
+include ../../templates/mixins
+
+doctype html
+html(lang='en')
+  head
+    meta(charset="utf-8")
+
+    include ../../templates/exercises/globals
+    script(type="module", src="./init.js")
+    include ./content/page_settings
+    include ../../templates/exercises/head
+    style @import './assets/custom.css'
+    if math
+      include ../../templates/exercises/math
+
+  body.animate.skin-base
+    //- Navigation Frame
+    include ../../templates/exercises/sidebar
+
+    //- Content Frame
+    div.header
+      span !{page_title}
+    div.main_frame
+      div#content_frame
+        include ./content/page_items
+
+    //- Footer
+    include ../../templates/exercises/footer
+
+    //- Page Scripts
+    include ../../templates/exercises/scripts
+    script(type="module" src="./src/access.js")
