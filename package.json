@@ -1,66 +1,69 @@
 {
-    "name": "gip_exercises",
-    "version": "1.0.2",
-    "description": "GIP Department Exercises Template",
-    "author": "Javier Morales et all",
-    "keywords": [
-        "UT",
-        "ITC",
-        "GIP",
-        "EXERCISES"
-    ],
-    "scripts": {
-        "create": "node ./src/init.mjs \"${npm_config_section}\"",
-        "clean": "rm -r .parcel-cache dist",
-        "hosts": "node ./src/hosts.mjs",
-        "prestart": "npm run hosts",
-        "start": "parcel ./index.pug --port 1234",
-        "prebuild": "rm -r dist",
-        "build": "parcel build --public-url . index.pug --no-source-maps"
-    },
-    "dependencies": {
-        "crypto-js": "^4.2.0",
-        "prismjs": "https://gip.itc.utwente.nl/dev/packages/prismjs.tar.gz"
-    },
-    "devDependencies": {
-        "line-reader": "^0.4.0",
-        "@parcel/packager-xml": "^2.12.0",
-        "@parcel/transformer-image": "^2.12.0",
-        "@parcel/transformer-inline-string": "^2.12.0",
-        "@parcel/transformer-pug": "^2.12.0",
-        "@parcel/transformer-xml": "^2.12.0",
-        "parcel": "^2.9.3",
-        "parcel-namer-custom": "^0.2.0",
-        "parcel-reporter-static-files-copy": "^1.5.3",
-        "parcel-transformer-html-datasrc": "^1.3.3"
-    },
-    "parcel-namer-custom": {
-        ".woff$": "fonts/[hash].[type]",
-        ".woff2$": "fonts/[hash].[type]",
-        ".eot$": "fonts/[hash].[type]",
-        ".ttf$": "fonts/[hash].[type]",
-        "icon.svg$": "fonts/[hash].[type]",
-        ".gif$": "images/[hash].[type]",
-        ".png$": "images/[hash].[type]",
-        ".ico$": "images/[hash].[type]",
-        "_txt$": "listings/[hash].lst",
-        "_tree$": "listings/[hash].lst",
-        "_css$": "listings/[hash].lst",
-        "_html$": "listings/[hash].lst",
-        "_cmd$": "listings/[hash].lst",
-        "_map$": "listings/[hash].lst",
-        "_xml$": "listings/[hash].lst",
-        "_json$": "listings/[hash].lst",
-        "_js$": "listings/[hash].lst",
-        "_py$": "listings/[hash].lst",
-        "_sql$": "listings/[hash].lst",
-        "_pug$": "listings/[hash].lst",
-        "_php$": "listings/[hash].lst",
-        ".js$": "scripts/[hash].[type]"
-    },
-    "staticFiles": {
-        "staticPath": "settings",
-        "staticOutPath": "settings"
-    },
-    "browserslist": "defaults"
+  "name": "gip_exercises",
+  "version": "1.0.2",
+  "description": "GIP Department Exercises Template",
+  "author": "Javier Morales et all",
+  "keywords": [
+    "UT",
+    "ITC",
+    "GIP",
+    "EXERCISES"
+  ],
+  "config": {
+    "port": "1234"
+  },
+  "scripts": {
+    "create": "node ./src/init.mjs \"${npm_config_section}\"",
+    "clean": "rm -r .parcel-cache dist",
+    "hosts": "node ./src/hosts.mjs",
+    "prestart": "npm run hosts",
+    "start": "parcel ./index.pug --port ${npm_package_config_port}",
+    "prebuild": "rm -r dist",
+    "build": "parcel build --public-url . index.pug --no-source-maps"
+  },
+  "dependencies": {
+    "crypto-js": "^4.2.0",
+    "prismjs": "https://gip.itc.utwente.nl/dev/packages/prismjs.tar.gz"
+  },
+  "devDependencies": {
+    "line-reader": "^0.4.0",
+    "@parcel/packager-xml": "^2.12.0",
+    "@parcel/transformer-image": "^2.12.0",
+    "@parcel/transformer-inline-string": "^2.12.0",
+    "@parcel/transformer-pug": "^2.12.0",
+    "@parcel/transformer-xml": "^2.12.0",
+    "parcel": "^2.9.3",
+    "parcel-namer-custom": "^0.2.0",
+    "parcel-reporter-static-files-copy": "^1.5.3",
+    "parcel-transformer-html-datasrc": "^1.3.3"
+  },
+  "parcel-namer-custom": {
+    ".woff$": "fonts/[hash].[type]",
+    ".woff2$": "fonts/[hash].[type]",
+    ".eot$": "fonts/[hash].[type]",
+    ".ttf$": "fonts/[hash].[type]",
+    "icon.svg$": "fonts/[hash].[type]",
+    ".gif$": "images/[hash].[type]",
+    ".png$": "images/[hash].[type]",
+    ".ico$": "images/[hash].[type]",
+    "_txt$": "listings/[hash].lst",
+    "_tree$": "listings/[hash].lst",
+    "_css$": "listings/[hash].lst",
+    "_html$": "listings/[hash].lst",
+    "_cmd$": "listings/[hash].lst",
+    "_map$": "listings/[hash].lst",
+    "_xml$": "listings/[hash].lst",
+    "_json$": "listings/[hash].lst",
+    "_js$": "listings/[hash].lst",
+    "_py$": "listings/[hash].lst",
+    "_sql$": "listings/[hash].lst",
+    "_pug$": "listings/[hash].lst",
+    "_php$": "listings/[hash].lst",
+    ".js$": "scripts/[hash].[type]"
+  },
+  "staticFiles": {
+    "staticPath": "settings",
+    "staticOutPath": "settings"
+  },
+  "browserslist": "defaults"
 }
