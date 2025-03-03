@@ -8,10 +8,11 @@
             namely 'images & listings' and it should also be the same as the name of this file.
    * @param {string} exercise_folder - the name of the exercise folder where this section is physically located.
             This will make it possible for the content of the section to be reused in other exercises.
-   */
-  var section_name = 'Introduction';
+   */  
   var path = process.cwd();
   var exercise_folder = path.substring(path.lastIndexOf("/")+1);
+
+  var section_name = 'Introduction';
 
 include ../../../templates/exercises/section_id
 //- -----
