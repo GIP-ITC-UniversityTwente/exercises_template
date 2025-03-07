@@ -2,7 +2,7 @@ import { existsSync, readFileSync, writeFileSync, mkdirSync, appendFileSync } fr
 import { eachLine } from 'line-reader';
 
 let section = process.argv.slice(2)[0];
-let section_id = (section.replace(/ /g, '_')).toLowerCase();
+let section_id = (section.replace(/ /g, '_')).replace(/&/g, 'and').toLowerCase();
 let section_name = (section.replace(/_/g, ' ')).toLowerCase();
 
 if (!existsSync(`./content/${section_id}.pug`) && !existsSync(`./content/${section_id}`)){
