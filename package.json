@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "crypto-js": "^4.2.0",
-    "prismjs": "https://gip.itc.utwente.nl/dev/packages/prismjs.tar.gz"
+    "prismjs": "^1.30.0"
   },
   "devDependencies": {
     "line-reader": "^0.4.0",
