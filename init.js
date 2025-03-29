@@ -9,10 +9,11 @@ import 'prismjs/components/prism-markup.min.js'
 
 import 'prismjs/components/prism-sql.js'
 import 'prismjs/components/prism-json.min.js'
-import 'prismjs/components/prism-mapfile.js'
 import 'prismjs/components/prism-python.min.js'
 import 'prismjs/components/prism-powershell.min.js'
 import 'prismjs/components/prism-pug.min.js'
+
+import '../../packages/prismjs/components/prism-mapfile.js'
 
 import 'prismjs/plugins/line-numbers/prism-line-numbers.min.js'
 import 'prismjs/plugins/line-highlight/prism-line-highlight.js'
