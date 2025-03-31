@@ -15,6 +15,7 @@
   "scripts": {
     "create": "node ./src/init.mjs \"${npm_config_section}\"",
     "clean": "rm -r .parcel-cache dist",
+    "purge": "rm -r .parcel-cache node_modules",
     "hosts": "node ./src/hosts.mjs",
     "prestart": "npm run hosts",
     "start": "parcel ./index.pug --port ${npm_package_config_port}",
