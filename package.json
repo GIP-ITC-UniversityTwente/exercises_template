@@ -10,7 +10,7 @@
     "EXERCISES"
   ],
   "config": {
-    "port": "1234"
+    "port": "4321"
   },
   "scripts": {
     "create": "node ./src/init.mjs \"${npm_config_section}\"",
