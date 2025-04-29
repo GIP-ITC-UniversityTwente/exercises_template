@@ -13,7 +13,8 @@ import 'prismjs/components/prism-python.min.js'
 import 'prismjs/components/prism-powershell.min.js'
 import 'prismjs/components/prism-pug.min.js'
 
-import '../../packages/prismjs/components/prism-mapfile.js'
+import './src/prismjs/prism-mym.js'
+import './src/prismjs/prism-mapfile.js'
 
 import 'prismjs/plugins/line-numbers/prism-line-numbers.min.js'
 import 'prismjs/plugins/line-highlight/prism-line-highlight.js'
