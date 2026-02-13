@@ -19,7 +19,7 @@
     "hosts": "node ./src/hosts.mjs",
     "prestart": "npm run hosts",
     "start": "parcel ./index.pug --port ${npm_package_config_port}",
-    "prebuild": "rm -r dist",
+    "prebuild": "rm -rf dist && npm run hosts",
     "build": "parcel build --public-url . index.pug --no-source-maps"
   },
   "dependencies": {
